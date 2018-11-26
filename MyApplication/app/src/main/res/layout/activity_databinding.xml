@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class=".CustomBinding">
+
+        <variable
+            name="person"
+            type="com.kyle.myapplication.bean.PersonInfoBean" />
+    </data>
+
+    <!--layout 节点添加了xmlns 后，View节点(LinearLayout) 就不需要在声明xmlns，databinding在合并的时候会出现冲突-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{@string/app_tag_name + person.getName()}' />
+
+        <!--<TextPathViewView&ndash;&gt;-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text='@{"年龄:" + person.age}' />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{String.format(@string/app_tag_age, person.age)}' />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{@string/app_tag_sex + (person.sex == 1 ? @string/app_tag_sex_man: @string/app_tag_sex_woman)}' />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onModify"
+            android:text="@string/btn_modify"
+            />
+    </LinearLayout>
+</layout>

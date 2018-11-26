@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>获取Html高度</title>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+		function getInfo() 
+{ 
+var s = ""; 
+s += " 网页可见区域宽："+ document.body.clientWidth; 
+s += " 网页可见区域高："+ document.body.clientHeight; //body
+s += " 网页可见区域宽："+ document.body.offsetWidth + " (包括边线和滚动条的宽)"; 
+s += " 网页可见区域高："+ document.body.offsetHeight + " (包括边线的宽)"; 
+s += " 网页正文全文宽："+ document.body.scrollWidth; 
+s += " 网页正文全文高："+ document.body.scrollHeight; //窗口
+s += " 网页被卷去的高(ff)："+ document.body.scrollTop; 
+s += " 网页被卷去的高(ie)："+ document.documentElement.scrollTop; 
+s += " 网页被卷去的左："+ document.body.scrollLeft; 
+s += " 网页正文部分上："+ window.screenTop; 
+s += " 网页正文部分左："+ window.screenLeft; 
+s += " 屏幕分辨率的高："+ window.screen.height; 
+s += " 屏幕分辨率的宽："+ window.screen.width; 
+s += " 屏幕可用工作区高度："+ window.screen.availHeight; 
+s += " 屏幕可用工作区宽度："+ window.screen.availWidth; 
+s += " 你的屏幕设置是 "+ window.screen.colorDepth +" 位彩色"; 
+s += " 你的屏幕设置 "+ window.screen.deviceXDPI +" 像素/英寸"; 
+//alert (s); 
+//console.log(s);
+} 
+
+	</script>
+	<div style="height: 2000px; background: #000000">
+		
+	</div>
+
+	<div style="height: 300px; background: #000fff">
+		
+	</div>
+	
+</body>
+<script type="text/javascript">
+	getInfo();
+	try{
+		WK.pageFinish();
+	}catch(err){
+	}
+</script>
+</html>

@@ -1,0 +1,19 @@
+import org.gradle.api.*
+import org.gradle.api.tasks.*
+
+class HelloWorldTask extends DefaultTask {
+    @Optional
+    String message = 'I am davenkin'
+
+    @TaskAction
+    def hello(){
+        println "hello world $message"
+    }
+}
+
+task hello(type:HelloWorldTask)
+
+
+task hello1(type:HelloWorldTask){
+    message ="I am a programmer"
+}

@@ -1,0 +1,2 @@
+println "setting.gradle"
+include ':app', ':javaapp', ':library', ':pxlib', ':permission', ':okhttp'

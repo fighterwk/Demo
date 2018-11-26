@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kyle.myapplication.view.MyViewGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.kyle.myapplication.view.LifeCycleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1" />
+
+    <com.kyle.myapplication.view.LifeCycleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2" />
+
+    <com.kyle.myapplication.view.LifeCycleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClear"
+        android:text="清理" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onAdd"
+        android:text="添加" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onModify"
+        android:text="清理" />
+</com.kyle.myapplication.view.MyViewGroup>
